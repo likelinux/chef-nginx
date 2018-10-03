@@ -1,4 +1,5 @@
 # nginx
 
-TODO: Enter the cookbook description here.
-
+Chef-Nginx
+----------
+This is Simple nginx Chef recipe
