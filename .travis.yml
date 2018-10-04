@@ -1,13 +1,18 @@
+# Needed for docker
 sudo: required
-dist: trusty
+
+services: docker
+
+# install the stable release of chefdk
 addons:
   apt:
-    source:
-      - sourceline: "deb https://packages.chef.io/repos/apt/current xenial main"
+    sources:
+      - chef-stable-precise
     packages:
       - chefdk
 
-services: docker
+# We don't need to install our gems as it comes from chefdk above
+install: echo "skip bundle install"
 
 before_script:
   - eval "$(/opt/chefdk/bin/chef shell-init bash)"
