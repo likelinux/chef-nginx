@@ -3,7 +3,7 @@ dist: trusty
 addons:
   apt:
     source:
-      - chef-stable-trusty
+      - sourceline: "deb https://packages.chef.io/repos/apt/current xenial main"
     packages:
       - chefdk
 
